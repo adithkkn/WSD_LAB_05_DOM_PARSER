@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body onload="loadXML()">
+ <p id="demo"></p>
+<div class="col-12 border border-dark" style="background: #e3e3e3;color: #f95959;margin: 10px;
+">
+<h1 id="modulename" style="text-align:center; "></h1>
+<p id="caption" style="text-align:center;"></p>
+</div>
+
+<div class="row">
+  <div class="col-12" style="text-align:center;">
+   <h1>Booking Details</h1> 
+   
+  </div>
+</div>
+<br>
+<div id="dis" style="display: none;">
+  <div class="row" style="text-align:center;">
+    <div class="col-4 " style="background: #e3e3e3" >
+     <div  ><b></b></div>
+    <div id="abt"></div>
+      </div>
+
+    <div class="col-4" style="background: #e3e3e3" >
+      <div id="abb" style="text-align: center;font-weight: bold;"></div>
+      <div id="abt2"></div>
+    </div>
+  
+    <div class="col-4" style="background: #e3e3e3" >
+      <div id="abt3" style="font-weight: bold;">
+      </div>
+      <div id="abt4"></div>
+    </div>
+  </div>
+</div>
+<br>
+<div>
+ <div class="row">
+ <form id='addRecordForm' class="col-5">
+        <h2 style="text-align:center;">INSERT DETAILS</h2>
+        <div class="mb-3 mt-3">
+            <label class="form-label">trainno</label>
+            <input type='number' id='trainno' class="form-control" placeholder="Enter trainno">
+        </div>
+        <div class="mb-3 mt-3">
+            <label>seatno</label>
+            <input type='number'  id='seatno' class="form-control" placeholder="Enter number">
+        </div>
+        <div class="mb-3 mt-3">
+            <label>passengername</label>
+            <input type='text'  id='passengername' class="form-control" placeholder="Enter name">
+        </div>
+        <div class="mb-3 mt-3">
+            <label>source</label>
+            <input type='text'  id='source' class="form-control" placeholder="Enter source">
+        </div>
+        <div class="mb-3 mt-3">
+            <label>destination</label>
+            <input type='text'  id='destination' class="form-control" placeholder="Enter destination">
+        </div>
+        <div class="mb-3 mt-3">
+            <label>bookingstatus</label>
+            <input type='text'  id='bookingstatus' class="form-control" placeholder="Enter status">
+        </div>
+        <div class="mb-3 mt-3">
+          <label>stationCode</label>
+          <input type='number'  id='stationCode' class="form-control" placeholder="enter stationcode">
+      </div>
+        <input style="text-align:center" type="button" value="INSERT" id="add" class="btn btn-primary" onclick="addNewRecord()">
+    </form>
+
+    <div class="col-7">
+        <h2 style="text-align:center;">DISPLAY DETAILS</h2>
+         <table id="table" border="1%"></table>
+    </div>
+  </div>
+</div>
+   
+
+    <!--Form for record input-->
+   
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="Railway.js"></script>
+</body>
+</html>
